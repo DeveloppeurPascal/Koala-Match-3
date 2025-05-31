@@ -19,8 +19,8 @@
   Patrick PREMARTIN
 
   ***************************************************************************
-  File last update : 2025-05-31T12:35:14.000+02:00
-  Signature : c0f2b64159df4b6bff0e9a61691db1e08f41e0c4
+  File last update : 2025-05-31T13:13:40.000+02:00
+  Signature : e6bbf5e8c9eea2062b2cd46b25e0a8b3ab268db5
   ***************************************************************************
 *)
 
@@ -71,7 +71,7 @@ uses
   uDMHelpBarManager in '..\lib-externes\Gamolf-FMX-Game-Starter-Kit\src\uDMHelpBarManager.pas' {HelpBarManager: TDataModule},
   _ButtonsAncestor in '..\lib-externes\Gamolf-FMX-Game-Starter-Kit\src\_ButtonsAncestor.pas' {__ButtonAncestor: TFrame},
   uSceneBackground in '..\_PRIVATE\assets\AdobeStock\GameBackground\uSceneBackground.pas' {SceneBackground: TFrame},
-  uSceneHome in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneHome.pas' {HomeScene: TFrame},
+  uSceneHome in 'uSceneHome.pas' {HomeScene: TFrame},
   uSceneGame in 'uSceneGame.pas' {GameScene: TFrame},
   cImageButton in '..\lib-externes\Bidioo-v2-Delphi\src\cImageButton.pas' {btnImageButton: TFrame},
   USVGIconesKolopach in '..\_PRIVATE\assets\Fotolia\icones.fotolia\IconesKolopach\USVGIconesKolopach.pas',
@@ -83,14 +83,14 @@ uses
   uSceneGameOver in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneGameOver.pas' {GameOverScene: TFrame},
   uSceneHallOfFame in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneHallOfFame.pas' {HallOfFameScene: TFrame},
   uSceneCredits in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneCredits.pas' {CreditsScene: TFrame},
-  uBidiooGameData in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooGameData.pas',
+  uBidiooGameData in 'uBidiooGameData.pas',
   uBidiooScores in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooScores.pas',
   udmAdobeStock_257147901 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_257147901\udmAdobeStock_257147901.pas' {dmAdobeStock_257147901: TDataModule},
   udmAdobeStock_257148021 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_257148021\udmAdobeStock_257148021.pas' {dmAdobeStock_257148021: TDataModule},
-  uBidiooConfig in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooConfig.pas',
-  cMatch3Game in '..\lib-externes\Bidioo-v2-Delphi\src\cMatch3Game.pas' {cadMatch3Game: TFrame},
+  cMatch3Game in 'cMatch3Game.pas' {cadMatch3Game: TFrame},
   USVGKoalas in '..\_PRIVATE\assets\AdobeStock\Koalas\Koalas\USVGKoalas.pas',
-  udmAdobeStock_244537511 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_244537511\udmAdobeStock_244537511.pas' {dmAdobeStock_244537511: TDataModule};
+  udmAdobeStock_244537511 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_244537511\udmAdobeStock_244537511.pas' {dmAdobeStock_244537511: TDataModule},
+  uBidiooConfig in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooConfig.pas';
 
 {$R *.res}
 
