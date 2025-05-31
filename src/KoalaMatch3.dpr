@@ -1,9 +1,9 @@
 ﻿(* C2PP
   ***************************************************************************
 
-  Bidioo
+  Koala Match 3
 
-  Copyright 2013-2025 Patrick PREMARTIN under AGPL 3.0 license.
+  Copyright 2025 Patrick PREMARTIN under AGPL 3.0 license.
 
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -18,15 +18,9 @@
   Author(s) :
   Patrick PREMARTIN
 
-  Site :
-  https://bidioo.gamolf.fr
-
-  Project site :
-  https://github.com/DeveloppeurPascal/Bidioo-v2-Delphi
-
   ***************************************************************************
-  File last update : 2025-05-29T17:58:14.000+02:00
-  Signature : e2e74a8f05a1d20c76ec35e6e7b213a11d4b4e80
+  File last update : 2025-05-31T12:19:27.892+02:00
+  Signature : ccb5e0ba7e16ace7f5d99dea26fc8788a1a5534d
   ***************************************************************************
 *)
 
