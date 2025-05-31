@@ -1,0 +1,64 @@
+inherited GameScene: TGameScene
+  Size.Width = 956.000000000000000000
+  Size.Height = 548.000000000000000000
+  OnResized = FrameResized
+  object lGameZone: TLayout
+    Align = Client
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 20.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Margins.Bottom = 20.000000000000000000
+    Size.Width = 676.000000000000000000
+    Size.Height = 508.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    OnResized = lGameZoneResized
+    inline cadMatch3Game1: TcadMatch3Game
+      Align = Center
+      HitTest = False
+      Size.Width = 975.000000000000000000
+      Size.Height = 616.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object lScoreAndBonus: TLayout
+    Align = Left
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 20.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Margins.Bottom = 20.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 20.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 508.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lScore: TLayout
+      Align = Top
+      Size.Width = 200.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      inline txtScore: TOlfFMXTextImageFrame
+        Align = Center
+        HitTest = False
+        Size.Width = 320.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object flBonus: TFlowLayout
+      Align = Client
+      Margins.Top = 20.000000000000000000
+      Size.Width = 200.000000000000000000
+      Size.Height = 388.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Justify = Center
+      JustifyLastLine = Center
+      FlowDirection = LeftToRight
+      HorizontalGap = 10.000000000000000000
+      VerticalGap = 10.000000000000000000
+    end
+  end
+end
