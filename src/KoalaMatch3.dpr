@@ -19,8 +19,8 @@
   Patrick PREMARTIN
 
   ***************************************************************************
-  File last update : 2025-05-31T12:19:27.892+02:00
-  Signature : ccb5e0ba7e16ace7f5d99dea26fc8788a1a5534d
+  File last update : 2025-05-31T12:35:14.000+02:00
+  Signature : c0f2b64159df4b6bff0e9a61691db1e08f41e0c4
   ***************************************************************************
 *)
 
@@ -34,15 +34,15 @@ uses
   Olf.FMX.AboutDialog in '..\lib-externes\AboutDialog-Delphi-Component\src\Olf.FMX.AboutDialog.pas',
   Olf.FMX.AboutDialogForm in '..\lib-externes\AboutDialog-Delphi-Component\src\Olf.FMX.AboutDialogForm.pas' {OlfAboutDialogForm},
   u_urlOpen in '..\lib-externes\librairies\src\u_urlOpen.pas',
-  uConsts in '..\lib-externes\Bidioo-v2-Delphi\src\uConsts.pas',
+  uConsts in 'uConsts.pas',
   Olf.RTL.Language in '..\lib-externes\librairies\src\Olf.RTL.Language.pas',
   Olf.RTL.CryptDecrypt in '..\lib-externes\librairies\src\Olf.RTL.CryptDecrypt.pas',
   Olf.RTL.Params in '..\lib-externes\librairies\src\Olf.RTL.Params.pas',
   Olf.Skia.SVGToBitmap in '..\lib-externes\librairies\src\Olf.Skia.SVGToBitmap.pas',
   uDMAboutBox in '..\lib-externes\Gamolf-FMX-Game-Starter-Kit\src\uDMAboutBox.pas' {AboutBox: TDataModule},
-  uDMAboutBoxLogoStorrage in '..\lib-externes\Bidioo-v2-Delphi\src\uDMAboutBoxLogoStorrage.pas' {dmAboutBoxLogo: TDataModule},
+  uDMAboutBoxLogoStorrage in 'uDMAboutBoxLogoStorrage.pas' {dmAboutBoxLogo: TDataModule},
   uTxtAboutLicense in '..\lib-externes\Bidioo-v2-Delphi\src\uTxtAboutLicense.pas',
-  uTxtAboutDescription in '..\lib-externes\Bidioo-v2-Delphi\src\uTxtAboutDescription.pas',
+  uTxtAboutDescription in 'uTxtAboutDescription.pas',
   Gamolf.FMX.HelpBar in '..\lib-externes\Delphi-Game-Engine\src\Gamolf.FMX.HelpBar.pas',
   Gamolf.FMX.Joystick in '..\lib-externes\Delphi-Game-Engine\src\Gamolf.FMX.Joystick.pas',
   Gamolf.FMX.MusicLoop in '..\lib-externes\Delphi-Game-Engine\src\Gamolf.FMX.MusicLoop.pas',
@@ -67,17 +67,16 @@ uses
   uSoundEffects in '..\lib-externes\Bidioo-v2-Delphi\src\uSoundEffects.pas',
   USVGInputPrompts in '..\lib-externes\Gamolf-FMX-Game-Starter-Kit\assets\kenney_nl\InputPrompts\USVGInputPrompts.pas',
   uDMGameControllerCenter in '..\lib-externes\Gamolf-FMX-Game-Starter-Kit\src\uDMGameControllerCenter.pas' {DMGameControllerCenter: TDataModule},
-  uSVGBitmapManager_InputPrompts in '..\lib-externes\Bidioo-v2-Delphi\src\uSVGBitmapManager_InputPrompts.pas',
+  uSVGBitmapManager_InputPrompts in 'uSVGBitmapManager_InputPrompts.pas',
   uDMHelpBarManager in '..\lib-externes\Gamolf-FMX-Game-Starter-Kit\src\uDMHelpBarManager.pas' {HelpBarManager: TDataModule},
   _ButtonsAncestor in '..\lib-externes\Gamolf-FMX-Game-Starter-Kit\src\_ButtonsAncestor.pas' {__ButtonAncestor: TFrame},
-  uSceneBackground in '..\_PRIVATE\assets\Fotolia\fond-de-page.fotolia\uSceneBackground.pas' {SceneBackground: TFrame},
+  uSceneBackground in '..\_PRIVATE\assets\AdobeStock\GameBackground\uSceneBackground.pas' {SceneBackground: TFrame},
   uSceneHome in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneHome.pas' {HomeScene: TFrame},
-  uSceneGame in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneGame.pas' {GameScene: TFrame},
+  uSceneGame in 'uSceneGame.pas' {GameScene: TFrame},
   cImageButton in '..\lib-externes\Bidioo-v2-Delphi\src\cImageButton.pas' {btnImageButton: TFrame},
   USVGIconesKolopach in '..\_PRIVATE\assets\Fotolia\icones.fotolia\IconesKolopach\USVGIconesKolopach.pas',
-  cGameTitle in '..\lib-externes\Bidioo-v2-Delphi\src\cGameTitle.pas' {cadGameTitle: TFrame},
+  cGameTitle in 'cGameTitle.pas' {cadGameTitle: TFrame},
   Olf.FMX.TextImageFrame in '..\lib-externes\librairies\src\Olf.FMX.TextImageFrame.pas' {OlfFMXTextImageFrame: TFrame},
-  USVGFruitsKolopach in '..\_PRIVATE\assets\Fotolia\motif-fruits.fotolia\FruitsKolopach\USVGFruitsKolopach.pas',
   cDialogBox in '..\_PRIVATE\assets\NicheEmpire\303-OTO-Ultimate-Marketing-Graphics-Collection-NE\cDialogBox.pas' {cadDialogBox: TFrame},
   uSceneOptions in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneOptions.pas' {OptionsScene: TFrame},
   uSceneTutoriel in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneTutoriel.pas' {TutorielScene: TFrame},
@@ -86,11 +85,12 @@ uses
   uSceneCredits in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneCredits.pas' {CreditsScene: TFrame},
   uBidiooGameData in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooGameData.pas',
   uBidiooScores in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooScores.pas',
-  udmAdobeStock_119308227Bidioo in '..\_PRIVATE\assets\AdobeStock\AdobeStock_119308227-Bidioo\udmAdobeStock_119308227Bidioo.pas' {dmAdobeStock_119308227Bidioo: TDataModule},
   udmAdobeStock_257147901 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_257147901\udmAdobeStock_257147901.pas' {dmAdobeStock_257147901: TDataModule},
   udmAdobeStock_257148021 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_257148021\udmAdobeStock_257148021.pas' {dmAdobeStock_257148021: TDataModule},
   uBidiooConfig in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooConfig.pas',
-  cMatch3Game in '..\lib-externes\Bidioo-v2-Delphi\src\cMatch3Game.pas' {cadMatch3Game: TFrame};
+  cMatch3Game in '..\lib-externes\Bidioo-v2-Delphi\src\cMatch3Game.pas' {cadMatch3Game: TFrame},
+  USVGKoalas in '..\_PRIVATE\assets\AdobeStock\Koalas\Koalas\USVGKoalas.pas',
+  udmAdobeStock_244537511 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_244537511\udmAdobeStock_244537511.pas' {dmAdobeStock_244537511: TDataModule};
 
 {$R *.res}
 
@@ -100,8 +100,8 @@ begin
   Application.FormFactor.Orientations := [TFormOrientation.Landscape, TFormOrientation.InvertedLandscape];
   Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TDMGameControllerCenter, DMGameControllerCenter);
-  Application.CreateForm(TdmAdobeStock_119308227Bidioo, dmAdobeStock_119308227Bidioo);
   Application.CreateForm(TdmAdobeStock_257147901, dmAdobeStock_257147901);
   Application.CreateForm(TdmAdobeStock_257148021, dmAdobeStock_257148021);
+  Application.CreateForm(TdmAdobeStock_244537511, dmAdobeStock_244537511);
   Application.Run;
 end.

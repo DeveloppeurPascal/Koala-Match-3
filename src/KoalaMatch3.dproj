@@ -640,7 +640,7 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\lib-externes\librairies\src\u_urlOpen.pas"/>
-        <DCCReference Include="..\lib-externes\Bidioo-v2-Delphi\src\uConsts.pas"/>
+        <DCCReference Include="uConsts.pas"/>
         <DCCReference Include="..\lib-externes\librairies\src\Olf.RTL.Language.pas"/>
         <DCCReference Include="..\lib-externes\librairies\src\Olf.RTL.CryptDecrypt.pas"/>
         <DCCReference Include="..\lib-externes\librairies\src\Olf.RTL.Params.pas"/>
@@ -650,13 +650,13 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\lib-externes\Bidioo-v2-Delphi\src\uDMAboutBoxLogoStorrage.pas">
+        <DCCReference Include="uDMAboutBoxLogoStorrage.pas">
             <Form>dmAboutBoxLogo</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="..\lib-externes\Bidioo-v2-Delphi\src\uTxtAboutLicense.pas"/>
-        <DCCReference Include="..\lib-externes\Bidioo-v2-Delphi\src\uTxtAboutDescription.pas"/>
+        <DCCReference Include="uTxtAboutDescription.pas"/>
         <DCCReference Include="..\lib-externes\Delphi-Game-Engine\src\Gamolf.FMX.HelpBar.pas"/>
         <DCCReference Include="..\lib-externes\Delphi-Game-Engine\src\Gamolf.FMX.Joystick.pas"/>
         <DCCReference Include="..\lib-externes\Delphi-Game-Engine\src\Gamolf.FMX.MusicLoop.pas"/>
@@ -689,7 +689,7 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\lib-externes\Bidioo-v2-Delphi\src\uSVGBitmapManager_InputPrompts.pas"/>
+        <DCCReference Include="uSVGBitmapManager_InputPrompts.pas"/>
         <DCCReference Include="..\lib-externes\Gamolf-FMX-Game-Starter-Kit\src\uDMHelpBarManager.pas">
             <Form>HelpBarManager</Form>
             <FormType>dfm</FormType>
@@ -700,7 +700,7 @@
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\_PRIVATE\assets\Fotolia\fond-de-page.fotolia\uSceneBackground.pas">
+        <DCCReference Include="..\_PRIVATE\assets\AdobeStock\GameBackground\uSceneBackground.pas">
             <Form>SceneBackground</Form>
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
@@ -710,7 +710,7 @@
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\lib-externes\Bidioo-v2-Delphi\src\uSceneGame.pas">
+        <DCCReference Include="uSceneGame.pas">
             <Form>GameScene</Form>
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
@@ -721,7 +721,7 @@
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="..\_PRIVATE\assets\Fotolia\icones.fotolia\IconesKolopach\USVGIconesKolopach.pas"/>
-        <DCCReference Include="..\lib-externes\Bidioo-v2-Delphi\src\cGameTitle.pas">
+        <DCCReference Include="cGameTitle.pas">
             <Form>cadGameTitle</Form>
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
@@ -731,7 +731,6 @@
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="..\_PRIVATE\assets\Fotolia\motif-fruits.fotolia\FruitsKolopach\USVGFruitsKolopach.pas"/>
         <DCCReference Include="..\_PRIVATE\assets\NicheEmpire\303-OTO-Ultimate-Marketing-Graphics-Collection-NE\cDialogBox.pas">
             <Form>cadDialogBox</Form>
             <FormType>fmx</FormType>
@@ -764,11 +763,6 @@
         </DCCReference>
         <DCCReference Include="..\lib-externes\Bidioo-v2-Delphi\src\uBidiooGameData.pas"/>
         <DCCReference Include="..\lib-externes\Bidioo-v2-Delphi\src\uBidiooScores.pas"/>
-        <DCCReference Include="..\_PRIVATE\assets\AdobeStock\AdobeStock_119308227-Bidioo\udmAdobeStock_119308227Bidioo.pas">
-            <Form>dmAdobeStock_119308227Bidioo</Form>
-            <FormType>dfm</FormType>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
         <DCCReference Include="..\_PRIVATE\assets\AdobeStock\AdobeStock_257147901\udmAdobeStock_257147901.pas">
             <Form>dmAdobeStock_257147901</Form>
             <FormType>dfm</FormType>
@@ -784,6 +778,12 @@
             <Form>cadMatch3Game</Form>
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\_PRIVATE\assets\AdobeStock\Koalas\Koalas\USVGKoalas.pas"/>
+        <DCCReference Include="..\_PRIVATE\assets\AdobeStock\AdobeStock_244537511\udmAdobeStock_244537511.pas">
+            <Form>dmAdobeStock_244537511</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
