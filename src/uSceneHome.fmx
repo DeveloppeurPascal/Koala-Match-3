@@ -1,0 +1,100 @@
+inherited HomeScene: THomeScene
+  Size.Width = 926.000000000000000000
+  Size.Height = 604.000000000000000000
+  inline cadGameTitle1: TcadGameTitle
+    Align = MostTop
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 20.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Margins.Bottom = 20.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 20.000000000000000000
+    Size.Width = 886.000000000000000000
+    Size.Height = 100.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Layout1: TLayout
+    Align = Contents
+    Size.Width = 926.000000000000000000
+    Size.Height = 604.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object FlowLayout1: TFlowLayout
+      Align = VertCenter
+      Position.Y = 177.000000000000000000
+      Size.Width = 926.000000000000000000
+      Size.Height = 250.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Justify = Center
+      JustifyLastLine = Center
+      FlowDirection = LeftToRight
+      inline btnPlay: TbtnImageButton
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 353.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        OnClick = btnPlayClick
+      end
+      inline btnScores: TbtnImageButton
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 473.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        OnClick = btnScoresClick
+      end
+      object FlowLayoutBreak1: TFlowLayoutBreak
+        ChangesRules = False
+        Justify = Left
+        JustifyLastLine = Left
+        FlowDirection = LeftToRight
+      end
+      inline btnOptions: TbtnImageButton
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 293.000000000000000000
+        Position.Y = 130.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        OnClick = btnOptionsClick
+      end
+      inline btnCredits: TbtnImageButton
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 413.000000000000000000
+        Position.Y = 130.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        OnClick = btnCreditsClick
+      end
+      inline btnQuit: TbtnImageButton
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 533.000000000000000000
+        Position.Y = 130.000000000000000000
+        Size.Width = 100.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        OnClick = btnQuitClick
+      end
+    end
+  end
+end
