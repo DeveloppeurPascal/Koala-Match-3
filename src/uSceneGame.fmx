@@ -8,8 +8,8 @@ inherited GameScene: TGameScene
     Margins.Top = 20.000000000000000000
     Margins.Right = 20.000000000000000000
     Margins.Bottom = 20.000000000000000000
-    Size.Width = 676.000000000000000000
-    Size.Height = 508.000000000000000000
+    Size.Width = 916.000000000000000000
+    Size.Height = 268.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     OnResized = lGameZoneResized
@@ -22,20 +22,26 @@ inherited GameScene: TGameScene
     end
   end
   object lScoreAndBonus: TLayout
-    Align = Left
+    Align = Bottom
     Margins.Left = 20.000000000000000000
     Margins.Top = 20.000000000000000000
     Margins.Right = 20.000000000000000000
     Margins.Bottom = 20.000000000000000000
     Position.X = 20.000000000000000000
-    Position.Y = 20.000000000000000000
-    Size.Width = 200.000000000000000000
-    Size.Height = 508.000000000000000000
+    Position.Y = 328.000000000000000000
+    Size.Width = 916.000000000000000000
+    Size.Height = 200.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 2
     object lScore: TLayout
       Align = Top
-      Size.Width = 200.000000000000000000
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 896.000000000000000000
       Size.Height = 100.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -49,9 +55,12 @@ inherited GameScene: TGameScene
     end
     object flBonus: TFlowLayout
       Align = Client
-      Margins.Top = 20.000000000000000000
-      Size.Width = 200.000000000000000000
-      Size.Height = 388.000000000000000000
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 896.000000000000000000
+      Size.Height = 60.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
       Justify = Center

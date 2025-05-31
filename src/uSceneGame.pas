@@ -19,8 +19,8 @@
   Patrick PREMARTIN
 
   ***************************************************************************
-  File last update : 2025-05-31T12:36:06.000+02:00
-  Signature : d08dc74be3f8fb6a307fdc0758767b32d556ea14
+  File last update : 2025-05-31T12:57:32.000+02:00
+  Signature : 1878128d94732e399eb15dca2d6e7c991b1cdfee
   ***************************************************************************
 *)
 
@@ -92,10 +92,10 @@ uses
   uUIElements,
   Gamolf.RTL.UIElements,
   Gamolf.RTL.Joystick,
-  udmAdobeStock_257148021,
   Gamolf.FMX.MusicLoop,
   uSoundEffects,
-  uConfig;
+  uConfig,
+  udmAdobeStock_257147901;
 
 { TGameScene }
 
@@ -117,7 +117,7 @@ begin
   inherited;
   txtScore.BeginUpdate;
   try
-    txtScore.Font := dmAdobeStock_257148021.ImageList;
+    txtScore.Font := dmAdobeStock_257147901.ImageList;
     txtScore.AutoSize := true;
     txtScore.Text := '0';
   finally
@@ -133,7 +133,7 @@ end;
 
 procedure TGameScene.FrameResized(Sender: TObject);
 begin
-  if width > height then
+  if false and (width > height) then
   begin
     lScoreAndBonus.BeginUpdate;
     try
@@ -233,15 +233,7 @@ end;
 
 procedure TGameScene.SetNbLives(const Value: cardinal);
 begin
-  if (Value <> TBidiooGameData.Current.NbLives) then
-  begin
-    TBidiooGameData.Current.NbLives := Value;
-    if TBidiooGameData.Current.NbLives < 1 then
-    begin
-      TBidiooGameData.Current.StopGame;
-      TScene.Current := TSceneType.GameOver;
-    end;
-  end;
+  TBidiooGameData.Current.NbLives := Value;
   AddBonus(TSVGIconesKolopachIndex.Coeur).Number :=
     TBidiooGameData.Current.NbLives;
 end;
@@ -273,11 +265,10 @@ begin
   item.TagObject := self;
 
   cadMatch3Game1.Clear;
-  cadMatch3Game1.UseMatchDirection := true;
   cadMatch3Game1.NbCol := TBidiooGameData.Current.ColCount;
   cadMatch3Game1.NbRow := TBidiooGameData.Current.RowCount;
-  cadMatch3Game1.BackgroundColor := TAlphaColors.Darkcyan;
-  cadMatch3Game1.SelectedBackgroundColor := TAlphaColors.cyan;
+  cadMatch3Game1.BackgroundColor := TAlphaColors.Darkblue;
+  cadMatch3Game1.SelectedBackgroundColor := TAlphaColors.Darkslateblue;
   for i := 0 to TSVGKoalas.Count - 1 do
     cadMatch3Game1.SVGItems[i] := TSVGKoalas.SVG(i);
   cadMatch3Game1.width := cadMatch3Game1.NbCol * CDefaultBlocSize;
@@ -291,8 +282,16 @@ begin
     end;
   cadMatch3Game1.OnMoveButNoMatch3Proc := procedure
     begin
-      NbLives := NbLives - 1;
-      TSoundEffects.Play(TSoundEffectType.PerteDUneVie);
+      if TBidiooGameData.Current.NbLives < 1 then
+      begin
+        TBidiooGameData.Current.StopGame;
+        TScene.Current := TSceneType.GameOver;
+      end
+      else
+      begin
+        NbLives := NbLives - 1;
+        TSoundEffects.Play(TSoundEffectType.PerteDUneVie);
+      end;
     end;
 
   ClearBonusLayout;
@@ -303,23 +302,27 @@ begin
     OnClick := DoPause;
   end;
   // Music On/Off button
-  with AddBonus(TSVGIconesKolopachIndex.Music) do
-  begin
-    IsPressedButton := true;
-    IsPressed := TMusicLoop.Current.IsPlaying;
-    ShowNumber := false;
-    OnClick := DoMusicOnOff;
-  end;
+  // with AddBonus(TSVGIconesKolopachIndex.Music) do
+  // begin
+  // IsPressedButton := true;
+  // IsPressed := TMusicLoop.Current.IsPlaying;
+  // ShowNumber := false;
+  // OnClick := DoMusicOnOff;
+  // end;
   // Sound On/Off button
-  with AddBonus(TSVGIconesKolopachIndex.Micro) do
-  begin
-    IsPressedButton := true;
-    IsPressed := TConfig.Current.SoundEffectsOnOff;
-    ShowNumber := false;
-    OnClick := DoSoundsOnOff;
-  end;
+  // with AddBonus(TSVGIconesKolopachIndex.Micro) do
+  // begin
+  // IsPressedButton := true;
+  // IsPressed := TConfig.Current.SoundEffectsOnOff;
+  // ShowNumber := false;
+  // OnClick := DoSoundsOnOff;
+  // end;
   // Nb Lives
-  AddBonus(TSVGIconesKolopachIndex.Coeur).OnClick := nil;
+  with AddBonus(TSVGIconesKolopachIndex.Coeur) do
+  begin
+    OnClick := nil;
+    HitTest := false;
+  end;
   // TODO : charger les boutons des bonus disponibles dans la partie en cours
 
   Score := TBidiooGameData.Current.Score;
@@ -332,5 +335,13 @@ end;
 initialization
 
 TScene.RegisterScene<TGameScene>(TSceneType.Game);
+
+TConfig.Current.BeginUpdate;
+try
+  TConfig.Current.BackgroundMusicOnOff := false;
+  TConfig.Current.SoundEffectsOnOff := false;
+finally
+  TConfig.Current.EndUpdate;
+end;
 
 end.
