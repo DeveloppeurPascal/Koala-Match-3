@@ -83,7 +83,7 @@ const
   /// </remarks>
 {$IFDEF DEBUG}
   // In DEBUG mode
-  COpenGameInFullScreenMode = true;
+  COpenGameInFullScreenMode = false;
 {$ELSE}
   // For other compilations (including RELEASE)
   COpenGameInFullScreenMode = true;
@@ -94,7 +94,7 @@ const
   /// background music file when you execute the program in DEBUG on Windows
   /// (without deployment)
   /// </summary>
-  CDefaultBackgroundMusicPath = '';// TODO : à compléter
+  CDefaultBackgroundMusicPath = ''; // TODO : à compléter
 
   /// <summary>
   /// Add the name of your WAV or MP3 file to use as background music
@@ -110,7 +110,7 @@ const
   /// sound effects file when you execute the program in DEBUG on Windows
   /// (without deployment)
   /// </summary>
-  CDefaultSoundEffectsPath = '..\..\..\_PRIVATE\sounds\';// TODO : à compléter
+  CDefaultSoundEffectsPath = '..\..\..\_PRIVATE\sounds\'; // TODO : à compléter
 
   /// <summary>
   /// Used as a folder name to store your game settings
@@ -185,6 +185,16 @@ Const
   /// Change it to an other scene, like a game intro or a splashscreen
   /// </remarks>
   CDefaultSceneOnStartup = TSceneType.Home;
+
+  /// <summary>
+  /// Default number of columns for the game grid
+  /// </summary>
+  CDefaultColCount = 7;
+
+  /// <summary>
+  /// Default number of rows for the game grid
+  /// </summary>
+  CDefaultRowCount = 5;
 
 {$IF Defined(RELEASE)}
 
