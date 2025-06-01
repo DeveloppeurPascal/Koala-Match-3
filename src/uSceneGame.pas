@@ -57,6 +57,8 @@ type
     flBonus: TFlowLayout;
     procedure lGameZoneResized(Sender: TObject);
     procedure FrameResized(Sender: TObject);
+    procedure lScoreResized(Sender: TObject);
+    procedure flBonusResized(Sender: TObject);
   private
     procedure SetNbLives(const Value: cardinal);
     procedure SetScore(const Value: cardinal);
@@ -64,6 +66,7 @@ type
     function GetScore: cardinal;
   protected
     procedure ClearBonusLayout;
+    procedure RepaintBonusLayout;
     function AddBonus(const BonusType: TSVGIconesKolopachIndex)
       : TbtnImageButton;
     procedure RemoveBonus(const BonusType: TSVGIconesKolopachIndex);
@@ -85,6 +88,7 @@ implementation
 {$R *.fmx}
 
 uses
+  System.Math,
   uScene,
   uConsts,
   USVGKoalas,
@@ -133,30 +137,19 @@ end;
 
 procedure TGameScene.FrameResized(Sender: TObject);
 begin
-  if false and (width > height) then
-  begin
-    lScoreAndBonus.BeginUpdate;
-    try
-      lScoreAndBonus.Align := TAlignLayout.Left;
-      lScoreAndBonus.width := 350;
-      if lScoreAndBonus.width > width / 5 then
-        lScoreAndBonus.width := width / 5;
-    finally
-      lScoreAndBonus.EndUpdate;
-    end;
-  end
-  else
-  begin
-    lScoreAndBonus.BeginUpdate;
-    try
-      lScoreAndBonus.Align := TAlignLayout.bottom;
-      lScoreAndBonus.height := 200;
-      if lScoreAndBonus.height > height / 5 then
-        lScoreAndBonus.height := height / 5;
-    finally
-      lScoreAndBonus.EndUpdate;
-    end;
+  lScoreAndBonus.BeginUpdate;
+  try
+    lScoreAndBonus.Align := TAlignLayout.bottom;
+    lScoreAndBonus.height := 200;
+    if lScoreAndBonus.height > height / 5 then
+      lScoreAndBonus.height := height / 5;
+  finally
+    lScoreAndBonus.EndUpdate;
   end;
+  lScore.height := lScoreAndBonus.height / 2 - lScore.Margins.Top -
+    lScore.Margins.bottom;
+  flBonus.height := lScoreAndBonus.height / 2 - flBonus.Margins.Top -
+    flBonus.Margins.bottom;
 end;
 
 function TGameScene.GetBonus(const BonusType: TSVGIconesKolopachIndex)
@@ -211,6 +204,11 @@ begin
     TConfig.Current.SoundEffectsOnOff;
 end;
 
+procedure TGameScene.flBonusResized(Sender: TObject);
+begin
+  RepaintBonusLayout;
+end;
+
 procedure TGameScene.HideScene;
 begin
   inherited;
@@ -222,6 +220,11 @@ begin
   cadMatch3Game1.FitInParent;
 end;
 
+procedure TGameScene.lScoreResized(Sender: TObject);
+begin
+  txtScore.refresh;
+end;
+
 procedure TGameScene.RemoveBonus(const BonusType: TSVGIconesKolopachIndex);
 var
   btn: TbtnImageButton;
@@ -229,6 +232,28 @@ begin
   btn := GetBonus(BonusType);
   if assigned(btn) then
     btn.free;
+end;
+
+procedure TGameScene.RepaintBonusLayout;
+var
+  i: integer;
+  h: single;
+begin
+  h := min(flBonus.height, 100);
+  for i := 0 to flBonus.ChildrenCount - 1 do
+    if (flBonus.Children[i] is TbtnImageButton) and
+      ((flBonus.Children[i] as TbtnImageButton).height <> h) then
+      with (flBonus.Children[i] as TbtnImageButton) do
+      begin
+        BeginUpdate;
+        try
+          width := h;
+          height := h;
+        finally
+          EndUpdate;
+          Repaint;
+        end;
+      end;
 end;
 
 procedure TGameScene.SetNbLives(const Value: cardinal);
@@ -324,6 +349,7 @@ begin
     HitTest := false;
   end;
   // TODO : charger les boutons des bonus disponibles dans la partie en cours
+  RepaintBonusLayout;
 
   Score := TBidiooGameData.Current.Score;
   NbLives := TBidiooGameData.Current.NbLives;
