@@ -83,21 +83,20 @@ uses
   uSceneGameOver in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneGameOver.pas' {GameOverScene: TFrame},
   uSceneHallOfFame in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneHallOfFame.pas' {HallOfFameScene: TFrame},
   uSceneCredits in '..\lib-externes\Bidioo-v2-Delphi\src\uSceneCredits.pas' {CreditsScene: TFrame},
-  uBidiooGameData in 'uBidiooGameData.pas',
   uBidiooScores in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooScores.pas',
   udmAdobeStock_257147901 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_257147901\udmAdobeStock_257147901.pas' {dmAdobeStock_257147901: TDataModule},
   udmAdobeStock_257148021 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_257148021\udmAdobeStock_257148021.pas' {dmAdobeStock_257148021: TDataModule},
-  cMatch3Game in 'cMatch3Game.pas' {cadMatch3Game: TFrame},
   USVGKoalas in '..\_PRIVATE\assets\AdobeStock\Koalas\Koalas\USVGKoalas.pas',
   udmAdobeStock_244537511 in '..\_PRIVATE\assets\AdobeStock\AdobeStock_244537511\udmAdobeStock_244537511.pas' {dmAdobeStock_244537511: TDataModule},
-  uBidiooConfig in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooConfig.pas';
+  uBidiooConfig in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooConfig.pas',
+  uBidiooGameData in '..\lib-externes\Bidioo-v2-Delphi\src\uBidiooGameData.pas',
+  cMatch3Game in '..\lib-externes\Bidioo-v2-Delphi\src\cMatch3Game.pas' {cadMatch3Game: TFrame};
 
 {$R *.res}
 
 begin
   GlobalUseSkia := True;
   Application.Initialize;
-  Application.FormFactor.Orientations := [TFormOrientation.Landscape, TFormOrientation.InvertedLandscape];
   Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TDMGameControllerCenter, DMGameControllerCenter);
   Application.CreateForm(TdmAdobeStock_257147901, dmAdobeStock_257147901);
