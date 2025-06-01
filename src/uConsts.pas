@@ -19,8 +19,8 @@
   Patrick PREMARTIN
 
   ***************************************************************************
-  File last update : 2025-05-31T12:27:54.000+02:00
-  Signature : c56948aebfa85c9f8e28a9f07ddd78ed0645c2e7
+  File last update : 2025-06-01T10:57:50.000+02:00
+  Signature : 149ac3def695c1680e75952af6a4640be1a886b9
   ***************************************************************************
 *)
 
@@ -36,12 +36,12 @@ const
   /// Version number of your game, don't forget to update the
   /// Project/Options/Versions infos before compiling a public RELEASE
   /// </summary>
-  CAboutVersionNumber = '1.0';
+  CAboutVersionNumber = '1.1';
 
   /// <summary>
   /// Version date of your game, change it when you publish a new public release
   /// </summary>
-  CAboutVersionDate = '20250531';
+  CAboutVersionDate = '20250601';
 
   /// <summary>
   /// Title of your game used in the About box and as the main form caption
