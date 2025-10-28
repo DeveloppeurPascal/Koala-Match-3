@@ -18,8 +18,14 @@
   Author(s) :
   Patrick PREMARTIN
 
+  Site :
+  https://koalamatch3.gamolf.fr/
+
+  Project site :
+  https://github.com/DeveloppeurPascal/Koala-Match-3
+
   ***************************************************************************
-  File last update : 2025-05-31T12:45:14.000+02:00
+  File last update : 2025-05-31T13:22:26.000+02:00
   Signature : 5104c28460b026dcdfd1b1b22fdd827e0e79a504
   ***************************************************************************
 *)
