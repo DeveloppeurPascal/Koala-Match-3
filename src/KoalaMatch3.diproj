@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project Version="1.0">
-  <Title>Your Project Name</Title>
-  <Summary>sample projects</Summary>
+  <Title>Koala Match 3</Title>
+  <Summary/>
   <Author>Patrick PREMARTIN</Author>
   <Email>patrick@premartin.fr</Email>
-  <Copyright>(c) xxxx-2025 PATRICK PREMARTIN</Copyright>
+  <Copyright>(c) 2025 PATRICK PREMARTIN</Copyright>
   <Comment/>
   <Language>2057</Language>
   <Charset>1</Charset>
   <HeaderHtml>&lt;%TopicTitle%&gt;</HeaderHtml>
-  <FooterHtml>&lt;a href=" xxx" target="_blank"&gt; xxx&lt;/a&gt; (c) xxxx-2025 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
+  <FooterHtml>&lt;a href="https://koalamatch3.gamolf.fr/" target="_blank"&gt;Koala Match 3&lt;/a&gt; (c) 2025 &lt;a href="https://patrick.premartin.fr" target="_blank"&gt;Patrick PREMARTIN&lt;/a&gt; - Powered by &lt;a href="https://devjetsoftware.com/products/documentation-insight/" target="_blank"&gt;DocInsight&lt;/a&gt;</FooterHtml>
   <CustomDefines/>
+  <GlobalSearchPaths>false</GlobalSearchPaths>
   <ShowImplementationSection>false</ShowImplementationSection>
   <ShowPrivateMembers>false</ShowPrivateMembers>
   <ShowProtectedMembers>true</ShowProtectedMembers>
@@ -19,7 +20,9 @@
   <FileNamePolicy>0</FileNamePolicy>
   <CompilerVersion>27</CompilerVersion>
   <TargetPlatform>0</TargetPlatform>
-  <Sources/>
+  <Sources>
+    <Source>.\KoalaMatch3.dpr</Source>
+  </Sources>
   <Outputs>
     <Output Type="HTML">
       <Active>true</Active>
@@ -27,7 +30,7 @@
     </Output>
     <Output Type="CHM">
       <Active>true</Active>
-      <OutputFileName>..\YourProjectName.chm</OutputFileName>
+      <OutputFileName>..\KoalaMatch3.chm</OutputFileName>
     </Output>
     <Output Type="MSHELP2">
       <Active>false</Active>
