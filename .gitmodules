@@ -10,9 +10,6 @@
 [submodule "lib-externes/Delphi-Game-Engine"]
 	path = lib-externes/Delphi-Game-Engine
 	url = https://github.com/DeveloppeurPascal/Delphi-Game-Engine
-[submodule "lib-externes/Gamolf-FMX-Game-Starter-Kit"]
-	path = lib-externes/Gamolf-FMX-Game-Starter-Kit
-	url = https://github.com/DeveloppeurPascal/Gamolf-FMX-Game-Starter-Kit
 [submodule "lib-externes/librairies"]
 	path = lib-externes/librairies
 	url = https://github.com/DeveloppeurPascal/librairies
