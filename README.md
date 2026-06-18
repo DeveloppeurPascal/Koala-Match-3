@@ -26,7 +26,7 @@ This project uses dependencies in the form of sub-modules. They will be absent f
 * [DeveloppeurPascal/Bidioo-v2-Delphi](https://github.com/DeveloppeurPascal/Bidioo-v2-Delphi) must be installed in the ./lib-externes/Bidioo-v2-Delphi subfolder.
 * [DeveloppeurPascal/CilTseg4Delphi](https://github.com/DeveloppeurPascal/CilTseg4Delphi) must be installed in the ./lib-externes/CilTseg4Delphi subfolder.
 * [DeveloppeurPascal/Delphi-Game-Engine](https://github.com/DeveloppeurPascal/Delphi-Game-Engine) must be installed in the ./lib-externes/Delphi-Game-Engine subfolder.
-* [DeveloppeurPascal/Gamolf-FMX-Game-Starter-Kit](https://github.com/DeveloppeurPascal/Gamolf-FMX-Game-Starter-Kit) must be installed in the ./lib-externes/Gamolf-FMX-Game-Starter-Kit subfolder.
+* [DeveloppeurPascal/Gamolf-FMX-Game-Starter-Kit](https://codeberg.org/DeveloppeurPascal/Gamolf-FMX-Game-Starter-Kit) must be installed in the ./lib-externes/Gamolf-FMX-Game-Starter-Kit subfolder.
 * [DeveloppeurPascal/librairies](https://github.com/DeveloppeurPascal/librairies) must be installed in the ./lib-externes/librairies subfolder.
 
 ## Documentation and support
