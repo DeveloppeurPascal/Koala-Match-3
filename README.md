@@ -2,7 +2,7 @@
 
 [Cette page en français.](LISEZMOI.md)
 
-As a nod to the Loinduciel koala community on Twitch, this program is a simple match-3 game where you assemble koala heads to earn points.
+As a nod to the [Loinduciel](https://www.twitch.tv/loinduciel) koala community on Twitch, this program is a simple match-3 game where you assemble koala heads to earn points.
 
 This code repository contains a project developed in Object Pascal language under Delphi. You don't know what Delphi is and where to download it ? You'll learn more [on this web site](https://delphi-resources.developpeur-pascal.fr/).
 

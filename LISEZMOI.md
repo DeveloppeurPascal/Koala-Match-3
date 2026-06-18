@@ -2,7 +2,7 @@
 
 [This page in English.](README.md)
 
-Sous forme de clin d'oeil à la communauté des koalas de Loinduciel sur Twitch, ce programme est un simple jeu de type match-3 avec des têtes de koala à assembler pour gagner des points.
+Sous forme de clin d'oeil à la communauté des koalas de [Loinduciel sur Twitch](https://www.twitch.tv/loinduciel), ce programme est un simple jeu de type match-3 avec des têtes de koala à assembler pour gagner des points.
 
 Ce dépôt de code contient un projet développé en langage Pascal Objet sous Delphi. Vous ne savez pas ce qu'est Delphi ni où le télécharger ? Vous en saurez plus [sur ce site web](https://delphi-resources.developpeur-pascal.fr/).
 
